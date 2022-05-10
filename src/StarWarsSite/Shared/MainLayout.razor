@@ -1,20 +1,14 @@
 ﻿@inherits LayoutComponentBase
+@inject NavigationManager _nav
 
 <PageTitle>StarWarsSite</PageTitle>
 
 <main>
-    <RadzenCard class="menu">
+    <RadzenCard class="menu mt-2">
         <RadzenMenu>
-            <RadzenMenuItem Click="OnMenuItemClicked" Text="Home" Icon="home"/>
-            <RadzenMenuItem Click="OnMenuItemClicked" Text="Planets" Icon="language"/>
+            <RadzenMenuItem Click='@(()=>_nav.NavigateTo(""))' Text="Home" Icon="home"/>
+            <RadzenMenuItem Click='@(()=>_nav.NavigateTo("spaceship"))' Text="Your Spaceship" Icon="language"/>
         </RadzenMenu>
     </RadzenCard>
     @Body
 </main>
-
-@code {
-    void OnMenuItemClicked(MenuItemEventArgs args)
-    {
-        //
-    }
-}
