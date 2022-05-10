@@ -1,0 +1,20 @@
+﻿@inherits LayoutComponentBase
+
+<PageTitle>StarWarsSite</PageTitle>
+
+<main>
+    <RadzenCard class="menu">
+        <RadzenMenu>
+            <RadzenMenuItem Click="OnMenuItemClicked" Text="Home" Icon="home"/>
+            <RadzenMenuItem Click="OnMenuItemClicked" Text="Planets" Icon="language"/>
+        </RadzenMenu>
+    </RadzenCard>
+    @Body
+</main>
+
+@code {
+    void OnMenuItemClicked(MenuItemEventArgs args)
+    {
+        //
+    }
+}

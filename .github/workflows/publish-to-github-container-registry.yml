@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'src/DevAntler.StarWarsSite/**'
+      - 'src/StarWarsSite/**'
 
 jobs:
   build-and-push-image:
@@ -40,7 +40,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v3
         with:
-          context: src/DevAntler.StarWarsSite
+          context: src/StarWarsSite
           platforms: linux/arm64
           push: true
           tags: ${{ steps.meta.outputs.tags }}
