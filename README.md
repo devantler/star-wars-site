@@ -4,7 +4,7 @@ This repository contains the following:
 
 - A Star Wars site built with C#, Blazor (server-side), and Umbraco Heartcore as a data source.
 - A GitHub Action to publish a docker image for the star wars site.
-- A Nomad Pack to easily deploy the latest version of the star wars site to my HomeLab.
+- A Nomad Pack to easily deploy the latest version of the star wars site to my HomeLab. (Check packs/starwars-site/README.md for more info.)
 
 I built this site with the following tools:
 
