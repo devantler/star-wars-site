@@ -41,6 +41,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: src/StarWarsSite
+          file: src/StarWarsSite/Dockerfile
           platforms: linux/arm64
           push: true
           tags: ${{ steps.meta.outputs.tags }}
