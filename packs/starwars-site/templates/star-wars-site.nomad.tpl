@@ -3,7 +3,7 @@ job "star-wars-site" {
   group "star-wars-site" {
     network {
       port  "http" {
-        to = 8080
+        to = 5000
       }
     }
     service {
@@ -23,8 +23,7 @@ job "star-wars-site" {
     task "star-wars-site" {
       driver = "docker"
       config {
-        image = "plantuml/star-wars-site:v1.2022.4"
-        ports = ["http"]
+        image = "devantler/star-wars-site:latest"
       }
     }
   }
