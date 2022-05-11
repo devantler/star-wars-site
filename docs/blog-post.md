@@ -26,6 +26,6 @@ Fishing and traveling are something I want to do more often, but studying is har
 
 Well... Umbraco is an awesome company! Umbraco has a lot of amazing people, and one more now that I am a member of the team! 😎 I am a huge fan of the company because we create open-source software and because Content Management Systems are awesome! I believe most companies that provide open-source projects are friendly at the core and are driven by passion. Also Sharing is Caring! 🤝
 
-Another thing that makes me smile, is that Umbraco focuses on creating software that is simple to use, both for the developers and platform users. Creating software that is not complex to understand or use is very important to me.
+Another thing that makes happy, is that Umbraco focuses on creating software that is simple to use, both for developers and content editors. Creating software that is not complex to understand or use is very important to me.
 
 I look forward to working with Umbraco and growing with the team! 
