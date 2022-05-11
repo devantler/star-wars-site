@@ -24,8 +24,8 @@ Fishing and traveling are something I want to do more often, but studying is har
 
 ## Why Umbraco?
 
-Well... Umbraco is an awesome company! Umbraco has a lot of amazing people, and one more now that I am a member of the team! 😎 I am a huge fan of the company because they create open-source software, and I know for a fact that it requires passion and hard work. 
+Well... Umbraco is an awesome company! Umbraco has a lot of amazing people, and one more now that I am a member of the team! 😎 I am a huge fan of the company because we create open-source software and because Content Management Systems are awesome! I believe most companies that provide open-source projects are friendly at the core and are driven by passion. Also Sharing is Caring! 🤝
 
-Besides that Umbraco focuses on creating software that is simple to use, both for developers and platform users. Making software that other people can understand and use is something I find meaning in.
+Another thing that makes me smile, is that Umbraco focuses on creating software that is simple to use, both for the developers and platform users. Creating software that is not complex to understand or use is very important to me.
 
-I look forward to working more with Umbraco in the future, and growing with the team! 
+I look forward to working with Umbraco and growing with the team! 

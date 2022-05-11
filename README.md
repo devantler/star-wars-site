@@ -4,9 +4,11 @@ This repository contains the following:
 
 - A Star Wars site built with C#, Blazor (server-side), and Umbraco Heartcore as a data source.
 - A GitHub Action to publish a docker image for the star wars site.
-- A Nomad Pack to easily deploy the latest version of the star wars site to my HomeLab. (Check packs/star-wars-site/README.md for more info.)
+- A Nomad Pack (similar to helm charts) to easily deploy the latest version of the star wars site to my HomeLab. (Check packs/star-wars-site/README.md for more info.)
 
-I built this site with the following tools:
+I built the site and the setup with the following tools:
 
 - VSCode (Yes I am a little crazy because I am not using a "real" IDE, and instead I am customizing VSCode to my needs. Maybe someday I will need to use a real IDE again 👀)
-- .NET with HotReload. (Aint nobody got time for that)
+- .NET with HotReload. (ain't nobody got time for that)
+- Docker.
+- My High-Availability HomeLab (three RaspberryPis 4B with custom-built Raspbian distros) running HashiCorp Nomad, and HashiCorp Consul with integration to CloudFlare for Authentication purposes and DNS.
