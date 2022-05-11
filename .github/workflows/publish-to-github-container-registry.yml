@@ -6,8 +6,6 @@ on:
       - main
     tags:
       - 'v*'
-    paths:
-      - 'src/StarWarsSite/**'
 
 jobs:
   build-and-push-image:
