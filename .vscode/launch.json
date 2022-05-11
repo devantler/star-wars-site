@@ -6,7 +6,7 @@
             "type": "blazorwasm",
             "request": "launch",
             "cwd": "${workspaceFolder}/src/StarWarsSite",
-            "url": "https://localhost:7017" // Tell launch where to find site
+            "url": "https://localhost:7017"
         },
         {
             "name": "Watch",
@@ -16,17 +16,26 @@
             "program": "dotnet",
             "args": [
                 "watch",
-                "run",
+                "run"
             ],
-            "preLaunchTask": "build" // Ensure we don't watch an unbuilt site
+            "preLaunchTask": "build"
         },
         {
             "name": "Attach",
             "type": "blazorwasm",
             "request": "attach",
             "cwd": "${workspaceFolder}/src/StarWarsSite",
-            "url": "https://localhost:7017",  // Tell launch where to find site
-            "timeout": 120000, // Allows time for the site to launch
+            "url": "https://localhost:7017",
+            "timeout": 120000
+        },
+        {
+            "name": "Docker .NET Core Launch",
+            "type": "docker",
+            "request": "launch",
+            "preLaunchTask": "docker-run: debug",
+            "netCore": {
+                "appProject": "${workspaceFolder}/src/StarWarsSite/StarWarsSite.csproj"
+            }
         }
     ],
     "compounds": [
