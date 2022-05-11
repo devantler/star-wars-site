@@ -23,7 +23,7 @@ job "star-wars-site" {
     task "star-wars-site" {
       driver = "docker"
       config {
-        image = "devantler/star-wars-site:main"
+        image = "ghcr.io/devantler/star-wars-site:main"
       }
     }
   }
