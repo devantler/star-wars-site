@@ -24,6 +24,7 @@ job "star-wars-site" {
       driver = "docker"
       config {
         image = "ghcr.io/devantler/star-wars-site:main"
+        ports = ["http"]
       }
     }
   }
