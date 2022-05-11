@@ -11,8 +11,8 @@ job "star-wars-site" {
       port = "http" 
       tags = [
         "traefik.enable=true",
-        "traefik.http.routers.plantuml-server.entrypoints=websecure",
-        "traefik.http.routers.plantuml-server.tls.certresolver=letsencrypt",
+        "traefik.http.routers.star-wars-site.entrypoints=websecure",
+        "traefik.http.routers.star-wars-site.tls.certresolver=letsencrypt",
       ]
       check {
         type     = "tcp"
