@@ -2,10 +2,13 @@ name: Publish Star Wars site to GHCR
 
 on:
   push:
+    paths:
+    - 'src/StarWarsSite/**'
     branches:
       - main
     tags:
       - 'v*'
+    
 
 jobs:
   build-and-push-image:
