@@ -3,7 +3,7 @@ job "star-wars-site" {
   group "star-wars-site" {
     network {
       port  "http" {
-        to = 80
+        to = 5000
       }
     }
     service {
