@@ -3,5 +3,15 @@
 <PageTitle>Characters</PageTitle>
 
 <div id="root">
-
+    @foreach (var character in characters)
+    {
+        <div class="character">
+            <div class="name">
+                {character.Name}
+            </div>
+            <div class="description">
+                {character.Description}
+            </div>
+        </div>
+    }
 </div>
