@@ -1,6 +1,5 @@
 using MediatR;
 using Microsoft.AspNetCore.Components;
-using StarWarsSite.Features.StarWarsUseCase.ReadCharacters;
 using StarWarsSite.Models;
 
 namespace StarWarsSite.Pages;
