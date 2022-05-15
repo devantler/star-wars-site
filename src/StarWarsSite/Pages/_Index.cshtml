@@ -17,6 +17,13 @@
     <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
 </head>
 <body>
+    <audio preload loop autoplay id="background-music">
+        <source src="audio/star-wars-theme-song.mp3" type="audio/mp3">
+    </audio>
+    <script>
+        var audio = document.getElementById("background-music");
+        audio.volume = 0.05;
+    </script>
     @RenderBody()
     <div id="blazor-error-ui">
         <environment include="Staging,Production">

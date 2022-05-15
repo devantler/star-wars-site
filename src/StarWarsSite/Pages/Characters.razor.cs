@@ -13,6 +13,6 @@ public partial class Characters
 
     protected override async Task OnInitializedAsync()
     {
-        characters = await Mediator.Send(new ReadCharactersQuery());
+        //characters = await Mediator.Send(new ReadCharactersQuery());
     }
 }
