@@ -1,7 +1,6 @@
 ﻿@using Microsoft.JSInterop;
 
 @inject IJSRuntime JsRuntime;
-@inject NavigationManager NavigationManager;
 <audio src="audio/chewbacca.mp3" id="chewbacca"></audio>
 <audio src="audio/lightsaber.mp3" id="lightsaber"></audio>
 <Bar Breakpoint="Breakpoint.Desktop" Background="Background.Dark" ThemeContrast="ThemeContrast.Dark" class="shadow-sm">
@@ -15,19 +14,18 @@
                 <BarLink To="">Home</BarLink>
             </BarItem>
             <BarItem>
-                <BarLink Clicked=@( async () => PlaySoundAndGoTo("lightsaber", "planets"))>Planets</BarLink>
+                <BarLink Clicked=@( async () => PlaySound("lightsaber")) To="planets">Planets</BarLink>
             </BarItem>
             <BarItem>
-                <BarLink Clicked=@( async () => PlaySoundAndGoTo("chewbacca", "persons"))>Persons</BarLink>
+                <BarLink Clicked=@( async () => PlaySound("chewbacca")) To="persons">Persons</BarLink>
             </BarItem>
         </BarStart>
     </BarMenu>
 </Bar>
 
 @code {
-    async void PlaySoundAndGoTo(string audioElement, string path)
+    async void PlaySound(string audioElement)
     {
         await JsRuntime.InvokeAsync<string>("PlayAudio", audioElement);
-        NavigationManager.NavigateTo(path);
     }
 }
