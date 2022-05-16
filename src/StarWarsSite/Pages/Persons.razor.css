@@ -7,3 +7,12 @@
     -o-background-size: cover;
     background-size: cover;
 }
+
+::deep .person {
+    border-radius: 25px;
+    background: url(images/person.jpg) no-repeat top center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

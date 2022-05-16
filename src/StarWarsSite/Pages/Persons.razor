@@ -14,14 +14,12 @@
             @foreach (var person in persons)
             {
                 <Column ColumnSize="ColumnSize.IsHalf.OnTablet.IsThird.OnDesktop.IsQuarter.OnWidescreen.IsFull">
-                    <Card @key="person.Name" Class="person" Background="Background.Dark" WhiteText
-                    Margin="Margin.Is2.FromBottom">
-                        <CardBody>
+                    <Card @key="person.Name" Class="person" WhiteText
+                    Margin="Margin.Is3.FromBottom">
+                        <CardBody TextAlignment="TextAlignment.Center" >
                             <CardTitle Size="5">@person.Name</CardTitle>
                             <CardText>
-                                <Text>@person.Gender</Text>
-                                <Text>@person.Specie</Text>
-                                <Text>@person.Homeworld</Text>
+                                <Text>@person.Gender.ToUpperInvariant()</Text>
                             </CardText>
                             <Button Color="Color.Primary">Learn More</Button>
                         </CardBody>

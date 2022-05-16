@@ -15,12 +15,12 @@
             {
                 <Card Class="planet shadow-lg" Margin="Margin.Is2.OnX" Background="Background.Dark" WhiteText>
                     <CardImage Class="img" Source="images/planet.jpg" Alt=@($"{planet.Name} image") />
-                    <CardBody Flex="Flex.Column.JustifyContent.Between" Margin="Margin.IsAuto"
+                    <CardBody Flex="Flex.Column.JustifyContent.Around" Margin="Margin.IsAuto"
                     TextAlignment="TextAlignment.Center" TextWeight="TextWeight.Bold">
                         <CardTitle Size="5">@planet.Name</CardTitle>
                         <CardText>
                             <Text>Population:</Text>
-                            <br/>
+                            <br />
                             <Text>@planet.Population</Text>
                         </CardText>
                         <Button Class="button" Color="Color.Primary">Learn More</Button>

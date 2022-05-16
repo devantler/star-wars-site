@@ -21,14 +21,11 @@ public class ReadCharactersHandler : IRequestHandler<ReadPersonsQuery, IEnumerab
         foreach (var childContent in childrenPagedContent.Content.Items)
         {
             var properties = childContent.Properties;
-            var homeworldObject = properties.FirstOrDefault(x => x.Key == "homeworld").Value;
-            var homeworld = homeworldObject 
-            result.Add(new Person(
-                (string)properties.FirstOrDefault(x => x.Key == "personName").Value,
-                (string)properties.FirstOrDefault(x => x.Key == "gender").Value,
-                ,
-                (string)properties.FirstOrDefault(x => x.Key == "specie").Value
-            ));
+            result.Add(new Person{
+                Name = (string)properties.FirstOrDefault(x => x.Key == "personName").Value,
+                Gender = (string)properties.FirstOrDefault(x => x.Key == "gender").Value,
+                //Specie = (string)properties.FirstOrDefault(x => x.Key == "specie").Value
+            });
         }
         return result;
     }

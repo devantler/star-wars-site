@@ -1,8 +1,8 @@
 namespace StarWarsSite.Models;
 
-public record Person(
-    string Name,
-    string Gender,
-    string Homeworld,
-    string Specie
-);
+public record Person
+{
+    public string Name {get; set; } = "";
+    public string Gender {get; set; } = "";
+    //public string Specie {get; set; } = "";
+}

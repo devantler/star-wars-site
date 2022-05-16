@@ -2,6 +2,8 @@ using Blazorise;
 using Blazorise.Bootstrap;
 using Blazorise.Icons.FontAwesome;
 using MediatR;
+using StarWarsSite.Models;
+using Umbraco.Headless.Client.Net.Configuration;
 using Umbraco.Headless.Client.Net.Delivery;
 
 var builder = WebApplication.CreateBuilder(args);
