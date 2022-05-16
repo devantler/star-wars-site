@@ -3,15 +3,22 @@
 <PageTitle>Characters</PageTitle>
 
 <div id="root">
-    @foreach (var character in characters)
-    {
-        <div class="character">
-            <div class="name">
-                {character.Name}
-            </div>
-            <div class="description">
-                {character.Description}
-            </div>
-        </div>
-    }
+    <Container Fluid Margin="Margin.Is4.FromTop">
+        <Row>
+            <Virtualize Items="@characters" Context="character">
+                <Column ColumnSize="ColumnSize.IsHalf.OnTablet.IsThird.OnDesktop.IsQuarter.OnWidescreen.IsFull">
+                    <Card Class="character" Background="Background.Dark" WhiteText>
+                        <CardImage Source="" Alt=@($"{character.Name} image") />
+                        <CardBody>
+                            <CardTitle Size="5">@character.Name</CardTitle>
+                            <CardText>
+                                <Text>@character.Description</Text>
+                            </CardText>
+                            <Button Color="Color.Primary">Learn More</Button>
+                        </CardBody>
+                    </Card>
+                </Column>
+            </Virtualize>
+        </Row>
+    </Container>
 </div>

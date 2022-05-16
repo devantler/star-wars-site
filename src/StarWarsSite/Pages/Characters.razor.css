@@ -1,4 +1,4 @@
-div#root { 
+#root { 
     height:100%;
     overflow:hidden;
     background: url(images/backgrounds/characters.jpg) no-repeat center center fixed; 

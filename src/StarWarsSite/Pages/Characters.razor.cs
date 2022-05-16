@@ -8,7 +8,14 @@ public partial class Characters
 {
     [Inject] private IMediator Mediator { get; set; } = null!;
 
-    private IEnumerable<Character> characters = new List<Character>();
+    private List<Character> characters = new List<Character>{
+        new Character("Luke Skywalker", "Lorem ipsum", "Human", new Planet("Tatooine", "Tatooine")),
+        new Character("Darth Vader", "Lorem ipsum", "Human", new Planet("Tatooine", "Tatooine")),
+        new Character("Obi-Wan Kenobi", "Lorem ipsum", "Human", new Planet("Tatooine", "Tatooine")),
+        new Character("R2-D2", "Lorem ipsum", "Human", new Planet("Tatooine", "Tatooine")),
+        new Character("C-3PO", "Lorem ipsum", "Human", new Planet("Tatooine", "Tatooine")),
+        new Character("Yoda", "Lorem ipsum", "Human", new Planet("Tatooine", "Tatooine")),
+    };
 
     protected override async Task OnInitializedAsync()
     {

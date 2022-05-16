@@ -2,6 +2,7 @@ namespace StarWarsSite.Models;
 
 public record Character(
     string Name,
+    string Description,
     string Species,
-    string Planet
+    Planet Planet
 );
