@@ -14,9 +14,9 @@
             @foreach (var person in persons)
             {
                 <Column ColumnSize="ColumnSize.IsHalf.OnTablet.IsThird.OnDesktop.IsQuarter.OnWidescreen.IsFull">
-                    <Card @key="person.Name" Class="person" WhiteText
+                    <Card @key="person.Name" Class="person shadow-lg" WhiteText
                     Margin="Margin.Is3.FromBottom">
-                        <CardBody TextAlignment="TextAlignment.Center" >
+                        <CardBody Class="card-body" TextAlignment="TextAlignment.Center" TextWeight="TextWeight.Bold">
                             <CardTitle Size="5">@person.Name</CardTitle>
                             <CardText>
                                 <Text>@person.Gender.ToUpperInvariant()</Text>
