@@ -1,4 +1,4 @@
-# Mojn! (or Hello, as most would say 😉)
+# Mojn!
 
 ![Me in Norway](images/me-in-norway.jpg)
 
