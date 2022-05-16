@@ -22,7 +22,7 @@
                             <CardText>
                                 <Text>@CultureInfo.CurrentCulture.TextInfo.ToTitleCase(person.Gender)</Text>
                             </CardText>
-                            <Button Color="Color.Primary" Clicked="detailsModal.Show">Learn More</Button>
+                            <Button Color="Color.Primary" Clicked="@(() => detailsModal.Show(CreateDictionaryFromPerson(person)))">Learn More</Button>
                         </CardBody>
                     </Card>
                 </Column>

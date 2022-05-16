@@ -16,4 +16,12 @@ public partial class Persons
         var data = await Mediator.Send(new ReadPersonsQuery());
         persons = data.ToList();
     }
+
+    private static Dictionary<string, string> CreateDictionaryFromPerson(Person person)
+    {
+        return new Dictionary<string, string>{
+            {nameof(person.Name), person.Name},
+            {nameof(person.Gender), person.Gender}
+        };
+    }
 }

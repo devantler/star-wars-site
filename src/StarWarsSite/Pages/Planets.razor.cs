@@ -13,8 +13,17 @@ public partial class Planets
     private DetailsModal detailsModal = null!;
     private List<Planet> planets = new();
 
-    protected override async Task OnInitializedAsync(){
+    protected override async Task OnInitializedAsync()
+    {
         var data = await Mediator.Send(new ReadPlanetsQuery());
         planets = data.ToList();
+    }
+
+    private static Dictionary<string, string> CreateDictionaryFromPlanet(Planet planet)
+    {
+        return new Dictionary<string, string>{
+            {nameof(planet.Name), planet.Name},
+            {nameof(planet.Population), planet.Population}
+        };
     }
 }

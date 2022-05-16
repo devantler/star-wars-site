@@ -23,7 +23,7 @@
                             <br />
                             <Text>@planet.Population</Text>
                         </CardText>
-                        <Button Class="button" Color="Color.Primary" Clicked="detailsModal.Show">Visit</Button>
+                        <Button Class="button" Color="Color.Primary" Clicked="@(() => detailsModal.Show(CreateDictionaryFromPlanet(planet)))">Visit</Button>
                     </CardBody>
                 </Card>
             }
