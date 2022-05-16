@@ -1,4 +1,4 @@
-<Modal @ref="_modal">
+<Modal @ref=modal >
     <ModalContent Centered>
         <ModalHeader>
             <ModalTitle>Tatooine</ModalTitle>
@@ -22,15 +22,15 @@
 </Modal>
 
 @code {
-    private Modal _modal;
+    private Modal? modal;
 
-    public Task Show()
+    public void Show()
     {
-        return _modal.Show();
+        modal?.Show();
     }
 
-    public Task Hide()
+    public void Hide()
     {
-        return _modal.Hide();
+        modal?.Hide();
     }
 }

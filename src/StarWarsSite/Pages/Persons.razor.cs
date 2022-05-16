@@ -9,7 +9,7 @@ namespace StarWarsSite.Pages;
 public partial class Persons
 {
     [Inject] private IMediator Mediator { get; set; } = null!;
-    private DetailsModal _detailsModal;
+    private DetailsModal detailsModal = null!;
     private List<Person> persons = new();
 
     protected override async Task OnInitializedAsync(){

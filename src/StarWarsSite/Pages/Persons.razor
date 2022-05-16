@@ -22,12 +22,12 @@
                             <CardText>
                                 <Text>@CultureInfo.CurrentCulture.TextInfo.ToTitleCase(person.Gender)</Text>
                             </CardText>
-                            <Button Color="Color.Primary" Clicked="_detailsModal.Show">Learn More</Button>
+                            <Button Color="Color.Primary" Clicked="detailsModal.Show">Learn More</Button>
                         </CardBody>
                     </Card>
                 </Column>
             }
         </Row>
     </Container>
-    <Details @ref=_detailsModal />
+    <DetailsModal @ref="detailsModal"/>
 </div>
