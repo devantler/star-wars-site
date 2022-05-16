@@ -23,10 +23,11 @@
                             <br />
                             <Text>@planet.Population</Text>
                         </CardText>
-                        <Button Class="button" Color="Color.Primary">Learn More</Button>
+                        <Button Class="button" Color="Color.Primary" Clicked="_detailsModal.Show">Visit</Button>
                     </CardBody>
                 </Card>
             }
         </Row>
     </Container>
+    <Details @ref=_detailsModal />
 </div>

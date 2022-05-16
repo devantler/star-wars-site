@@ -21,11 +21,12 @@
                             <CardText>
                                 <Text>@person.Gender.ToUpperInvariant()</Text>
                             </CardText>
-                            <Button Color="Color.Primary">Learn More</Button>
+                            <Button Color="Color.Primary" Clicked="_detailsModal.Show">Learn More</Button>
                         </CardBody>
                     </Card>
                 </Column>
             }
         </Row>
     </Container>
+    <Details @ref=_detailsModal />
 </div>

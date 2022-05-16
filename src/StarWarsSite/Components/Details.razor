@@ -1,0 +1,37 @@
+<Modal @ref="modalRef">
+    <ModalContent Centered>
+        <ModalHeader>
+            <ModalTitle>Employee edit</ModalTitle>
+            <CloseButton />
+        </ModalHeader>
+        <ModalBody>
+            <Field>
+                <FieldLabel>Name</FieldLabel>
+                <TextEdit Placeholder="Enter name..." />
+            </Field>
+            <Field>
+                <FieldLabel>Surname</FieldLabel>
+                <TextEdit Placeholder="Enter surname..." />
+            </Field>
+        </ModalBody>
+        <ModalFooter>
+            <Button Color="Color.Secondary" Clicked="@Hide">Close</Button>
+            <Button Color="Color.Primary" Clicked="@Hide">Save Changes</Button>
+        </ModalFooter>
+    </ModalContent>
+</Modal>
+
+@code{
+    // reference to the modal component
+    private Modal modalRef;
+
+    public Task Show()
+    {
+        return modalRef.Show();
+    }
+
+    public Task Hide()
+    {
+        return modalRef.Hide();
+    }
+}
