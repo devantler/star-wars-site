@@ -1,4 +1,10 @@
-﻿<Bar Breakpoint="Breakpoint.Desktop" Background="Background.Dark" ThemeContrast="ThemeContrast.Dark" class="shadow-sm">
+﻿@using Microsoft.JSInterop;
+
+@inject IJSRuntime JsRuntime;
+@inject NavigationManager NavigationManager;
+<audio src="audio/chewbacca.mp3" id="chewbacca"></audio>
+<audio src="audio/lightsaber.mp3" id="lightsaber"></audio>
+<Bar Breakpoint="Breakpoint.Desktop" Background="Background.Dark" ThemeContrast="ThemeContrast.Dark" class="shadow-sm">
     <BarBrand>
         Star Wars Site
     </BarBrand>
@@ -9,11 +15,19 @@
                 <BarLink To="">Home</BarLink>
             </BarItem>
             <BarItem>
-                <BarLink To="planets">Planets</BarLink>
+                <BarLink Clicked=@( () => PlaySoundAndGoTo("lightsaber", "planets"))>Planets</BarLink>
             </BarItem>
             <BarItem>
-                <BarLink To="characters">Characters</BarLink>
+                <BarLink Clicked=@( () => PlaySoundAndGoTo("chewbacca", "characters"))>Characters</BarLink>
             </BarItem>
         </BarStart>
     </BarMenu>
 </Bar>
+
+@code {
+    async void PlaySoundAndGoTo(string audioElement, string path){
+        
+        await JsRuntime.InvokeAsync<string>("PlayAudio", audioElement);
+        NavigationManager.NavigateTo(path);
+    }
+}
