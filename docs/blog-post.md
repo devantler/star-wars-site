@@ -4,7 +4,7 @@
 
 My name is Nikolai, and I just joined the most awesome team at Umbraco HQ! 🥳🥳
 
-I am a 27-year-old man originally from Sønderborg, Als. Today I am studying in the last year of my master's in Software Engineering at the University of Southern Denmark (SDU, Odense). I am a commuter as I am currently located in Kolding with my beautiful fiancé. Most of the time I am a huge nerd 🤓; I love to code 👨🏻‍💻, solve problems, and make things. However, I also have a very social side, where I love meeting new people, enjoying a cold beer, or sailing 150km (Gudenåen) in 3 days in a canoe with my cousin! 🛶🍻
+I am a 28-year-old man originally from Sønderborg, Als. Today I am studying in the last year of my master's in Software Engineering at the University of Southern Denmark (SDU, Odense). I am a commuter as I am currently located in Kolding with my beautiful fiancé. Most of the time I am a huge nerd 🤓; I love to code 👨🏻‍💻, solve problems, and make things. However, I also have a very social side, where I love meeting new people, enjoying a cold beer, or sailing 150km (Gudenåen) in 3 days in a canoe with my cousin! 🛶🍻
 
 ![Canoe Trip on Gudenåen](images/canoe-trip.png)
 
