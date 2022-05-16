@@ -1,6 +1,6 @@
 div#root { 
     height:100%;
-    overflow:hidden;
+    overflow-x:hidden;
     background: url(images/backgrounds/home.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;

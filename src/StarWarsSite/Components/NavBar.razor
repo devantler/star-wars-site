@@ -15,10 +15,10 @@
                 <BarLink To="">Home</BarLink>
             </BarItem>
             <BarItem>
-                <BarLink Clicked=@( () => PlaySoundAndGoTo("lightsaber", "planets"))>Planets</BarLink>
+                <BarLink Clicked=@( async () => PlaySoundAndGoTo("lightsaber", "planets"))>Planets</BarLink>
             </BarItem>
             <BarItem>
-                <BarLink Clicked=@( () => PlaySoundAndGoTo("chewbacca", "characters"))>Characters</BarLink>
+                <BarLink Clicked=@( async () => PlaySoundAndGoTo("chewbacca", "persons"))>Persons</BarLink>
             </BarItem>
         </BarStart>
     </BarMenu>
@@ -27,7 +27,6 @@
 @code {
     async void PlaySoundAndGoTo(string audioElement, string path)
     {
-
         await JsRuntime.InvokeAsync<string>("PlayAudio", audioElement);
         NavigationManager.NavigateTo(path);
     }

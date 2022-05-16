@@ -4,19 +4,29 @@
 
 <div id="root">
     <Container Fluid Margin="Margin.Is2.FromTop">
+        @if (planets.Count == 0)
+        {
+            <div class="center-fixed">
+                <SpinKit Type="SpinKitType.CircleFade" />
+            </div>
+        }
         <Row Flex="Flex.JustifyContent.Center" Margin="Margin.Is3.FromBottom">
-            <Virtualize Items="@planets" Context="planet">
-                    <Card Class="planet shadow-lg" Margin="Margin.Is2.OnX" Background="Background.Dark" WhiteText>
-                        <CardImage Source="" Alt=@($"{planet.Name} image") />
-                        <CardBody Flex="Flex.Column.JustifyContent.Between" Margin="Margin.IsAuto" TextAlignment="TextAlignment.Center">
-                            <CardTitle Size="5">@planet.Name</CardTitle>
-                            <CardText>
-                                <Text>@planet.SolarSystem</Text>
-                            </CardText>
-                            <Button Class="button" Color="Color.Primary">Learn More</Button>
-                        </CardBody>
-                    </Card>
-            </Virtualize>
+            @foreach (var planet in planets)
+            {
+                <Card Class="planet shadow-lg" Margin="Margin.Is2.OnX" Background="Background.Dark" WhiteText>
+                    <CardImage Class="img" Source="images/planet.jpg" Alt=@($"{planet.Name} image") />
+                    <CardBody Flex="Flex.Column.JustifyContent.Between" Margin="Margin.IsAuto"
+                    TextAlignment="TextAlignment.Center" TextWeight="TextWeight.Bold">
+                        <CardTitle Size="5">@planet.Name</CardTitle>
+                        <CardText>
+                            <Text>Population:</Text>
+                            <br/>
+                            <Text>@planet.Population</Text>
+                        </CardText>
+                        <Button Class="button" Color="Color.Primary">Learn More</Button>
+                    </CardBody>
+                </Card>
+            }
         </Row>
     </Container>
 </div>

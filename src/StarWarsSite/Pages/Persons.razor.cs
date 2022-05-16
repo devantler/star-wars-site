@@ -1,18 +1,17 @@
 using MediatR;
 using Microsoft.AspNetCore.Components;
-using StarWarsSite.Features.StarWarsUseCase.ReadPlanets;
+using StarWarsSite.Features.StarWarsUseCase.ReadPersons;
 using StarWarsSite.Models;
 
 namespace StarWarsSite.Pages;
 
-public partial class Planets
+public partial class Persons
 {
     [Inject] private IMediator Mediator { get; set; } = null!;
-
-    private List<Planet> planets = new();
+    private List<Person> persons = new();
 
     protected override async Task OnInitializedAsync(){
-        var data = await Mediator.Send(new ReadPlanetsQuery());
-        planets = data.ToList();
+        var data = await Mediator.Send(new ReadPersonsQuery());
+        persons = data.ToList();
     }
 }

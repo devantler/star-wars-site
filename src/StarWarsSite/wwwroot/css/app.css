@@ -2,7 +2,14 @@
 body,
 main {
     height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
+}
+
+.center-fixed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #blazor-error-ui {
