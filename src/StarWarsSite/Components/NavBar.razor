@@ -25,8 +25,9 @@
 </Bar>
 
 @code {
-    async void PlaySoundAndGoTo(string audioElement, string path){
-        
+    async void PlaySoundAndGoTo(string audioElement, string path)
+    {
+
         await JsRuntime.InvokeAsync<string>("PlayAudio", audioElement);
         NavigationManager.NavigateTo(path);
     }
