@@ -1,4 +1,4 @@
-# Mojn!
+# Mojn/Hello/Goddaw!
 
 ![Me in Norway](images/me-in-norway.jpg)
 
