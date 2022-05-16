@@ -8,7 +8,8 @@ public partial class Home
     [Inject] private IJSRuntime JsRuntime  { get; set; } = null!;
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        await PlayBackgroundMusic();
+        if(firstRender)
+            await PlayBackgroundMusic();
     }
 
     public async Task PlayBackgroundMusic()

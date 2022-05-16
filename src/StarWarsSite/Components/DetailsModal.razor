@@ -1,0 +1,36 @@
+<Modal @ref="_modal">
+    <ModalContent Centered>
+        <ModalHeader>
+            <ModalTitle>Tatooine</ModalTitle>
+            <CloseButton />
+        </ModalHeader>
+        <ModalBody>
+            <Row Flex="Flex.JustifyContent.Center">
+                <Text TextWeight="TextWeight.Bold">Name: </Text>
+                <Text>Your name</Text>
+            </Row>
+
+            <Field>
+                <FieldLabel>Surname:</FieldLabel>
+                <Text>Your surname</Text>
+            </Field>
+        </ModalBody>
+        <ModalFooter>
+            <Button Color="Color.Primary" Clicked="@Hide">Close</Button>
+        </ModalFooter>
+    </ModalContent>
+</Modal>
+
+@code {
+    private Modal _modal;
+
+    public Task Show()
+    {
+        return _modal.Show();
+    }
+
+    public Task Hide()
+    {
+        return _modal.Hide();
+    }
+}

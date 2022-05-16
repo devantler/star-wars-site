@@ -3,17 +3,17 @@
 <PageTitle>Planets</PageTitle>
 
 <div id="root">
-    <Container Fluid Margin="Margin.Is2.FromTop">
+    <Container Margin="Margin.Is2.FromTop">
         @if (planets.Count == 0)
         {
             <div class="center-fixed">
                 <SpinKit Type="SpinKitType.CircleFade" />
             </div>
         }
-        <Row Flex="Flex.JustifyContent.Center" Margin="Margin.Is3.FromBottom">
+        <Row Flex="Flex.JustifyContent.Center" Margin="Margin.Is4.FromBottom">
             @foreach (var planet in planets)
             {
-                <Card Class="planet shadow-lg" Margin="Margin.Is2.OnX" Background="Background.Dark" WhiteText>
+                <Card Class="planet shadow-lg" Margin="Margin.Is3" Background="Background.Dark" WhiteText>
                     <CardImage Class="img" Source="images/planet.jpg" Alt=@($"{planet.Name} image") />
                     <CardBody Flex="Flex.Column.JustifyContent.Around" Margin="Margin.IsAuto"
                     TextAlignment="TextAlignment.Center" TextWeight="TextWeight.Bold">
@@ -29,5 +29,5 @@
             }
         </Row>
     </Container>
-    <Details @ref=_detailsModal />
+    <DetailsModal @ref=_detailsModal />
 </div>

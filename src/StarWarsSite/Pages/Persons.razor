@@ -1,9 +1,10 @@
 @page "/persons"
+@using System.Globalization
 
 <PageTitle>Persons</PageTitle>
 
 <div id="root">
-    <Container Fluid Margin="Margin.Is4.FromTop">
+    <Container Margin="Margin.Is4.FromTop">
         @if (persons.Count == 0)
         {
             <div class="center-fixed">
@@ -13,13 +14,13 @@
         <Row>
             @foreach (var person in persons)
             {
-                <Column ColumnSize="ColumnSize.IsHalf.OnTablet.IsThird.OnDesktop.IsQuarter.OnWidescreen.IsFull">
+                <Column ColumnSize="ColumnSize.IsFull.OnMobile.IsHalf.OnTablet.IsThird.OnDesktop.IsQuarter.OnWidescreen">
                     <Card @key="person.Name" Class="person shadow-lg" WhiteText
                     Margin="Margin.Is3.FromBottom">
                         <CardBody Class="card-body" TextAlignment="TextAlignment.Center" TextWeight="TextWeight.Bold">
                             <CardTitle Size="5">@person.Name</CardTitle>
                             <CardText>
-                                <Text>@person.Gender.ToUpperInvariant()</Text>
+                                <Text>@CultureInfo.CurrentCulture.TextInfo.ToTitleCase(person.Gender)</Text>
                             </CardText>
                             <Button Color="Color.Primary" Clicked="_detailsModal.Show">Learn More</Button>
                         </CardBody>
