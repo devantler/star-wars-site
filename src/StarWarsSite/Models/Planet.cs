@@ -2,5 +2,6 @@ namespace StarWarsSite.Models;
 
 public record Planet(
     string Name,
-    string Population
+    string Population,
+    List<string?> Climate
 );

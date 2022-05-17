@@ -8,6 +8,7 @@
             "type": "DotNetWatch",
             "request": "launch",
             "name": ".NET Core Watch",
+            "project": "src/StarWarsSite",
             "env": {
                 "ASPNETCORE_ENVIRONMENT": "Development",
                 "DOTNET_WATCH_RESTART_ON_RUDE_EDIT": "true"
