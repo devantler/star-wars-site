@@ -12,3 +12,9 @@ I built the site and the setup with the following tools:
 - .NET with HotReload. (ain't nobody got time for that)
 - Docker.
 - My High-Availability HomeLab (three RaspberryPis 4B with custom-built Raspbian distros) running HashiCorp Nomad, and HashiCorp Consul with integration to CloudFlare for Authentication purposes and DNS.
+
+
+## Requirements
+
+- .NET-6.0
+- Volume if running the local version. The site has some epic sounds! 🤩
