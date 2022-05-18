@@ -17,7 +17,7 @@ I built the site and the setup with the following tools:
 ## Requirements
 
 - .NET-6.0
-- Volume if running the local version. The site has some epic sounds! 🤩
+- Volume turned on if running the local version. The site has some epic sounds! 🤩
 
 ## Can be viewed on
 
