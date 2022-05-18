@@ -15,16 +15,7 @@
             @foreach (var person in persons)
             {
                 <Column ColumnSize="ColumnSize.IsFull.OnMobile.IsHalf.OnTablet.IsThird.OnDesktop.IsQuarter.OnWidescreen">
-                    <Card @key="person.Name" Class="person shadow-lg" WhiteText
-                    Margin="Margin.Is3.FromBottom">
-                        <CardBody Class="card-body" TextAlignment="TextAlignment.Center" TextWeight="TextWeight.Bold">
-                            <CardTitle Size="5">@person.Name</CardTitle>
-                            <CardText>
-                                <Text>@CultureInfo.CurrentCulture.TextInfo.ToTitleCase(person.Gender)</Text>
-                            </CardText>
-                            <Button Color="Color.Primary" Clicked="@(() => detailsModal.Show(CreateDictionaryFromPerson(person)))">Learn More</Button>
-                        </CardBody>
-                    </Card>
+                    <PersonCard Person="person" DetailsModal=detailsModal/>
                 </Column>
             }
         </Row>

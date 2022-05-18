@@ -1,3 +1,4 @@
+@using System.Globalization
 <Modal @ref=modal>
     <ModalContent Centered Background="Background.Dark" TextColor="TextColor.White">
         <ModalHeader Style="border-bottom: 1px solid #6c757d;">
@@ -7,9 +8,9 @@
         <ModalBody>
             @foreach (var labelAndTextPairs in LabelsAndTexts)
             {
-                <Row Flex="Flex.JustifyContent.Center">
+                <Row Margin="Margin.Is5.OnX" Flex="Flex.JustifyContent.Between">
                     <Text TextWeight="TextWeight.Bold" Margin="Margin.Is1.FromEnd">@labelAndTextPairs.Key:</Text>
-                    <Text>@labelAndTextPairs.Value</Text>
+                    <Text>@CultureInfo.CurrentCulture.TextInfo.ToTitleCase(labelAndTextPairs.Value)</Text>
                 </Row>
             }
         </ModalBody>

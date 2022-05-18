@@ -1,10 +1,10 @@
+using System.Linq;
 using MediatR;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using StarWarsSite.Models;
 using Umbraco.Headless.Client.Net.Delivery;
 using Umbraco.Headless.Client.Net.Delivery.Models;
-using System.Linq;
-
 namespace StarWarsSite.Features.StarWarsUseCase.ReadPlanets;
 
 public class ReadPlanetsHandler : IRequestHandler<ReadPlanetsQuery, IEnumerable<Planet>>
@@ -16,24 +16,22 @@ public class ReadPlanetsHandler : IRequestHandler<ReadPlanetsQuery, IEnumerable<
     }
     public async Task<IEnumerable<Planet>> Handle(ReadPlanetsQuery request, CancellationToken cancellationToken)
     {
-        var result = new List<Planet>();
         var data = await _contentDeliveryService.Content.GetByType("planet", null, 1, 100);
-        var planetsContent = data.Content.Items;
-        return from planetContent in planetsContent select CreatePlanetFromProperties(planetContent);
+        return from itemContent in data.Content.Items select MapItemContentToPlanet(itemContent);
     }
 
-    private static Planet CreatePlanetFromProperties(Content planetContent)
+    private static Planet MapItemContentToPlanet(Content itemContent)
     {
-        var name = planetContent.Name;
-        var rotationPeriod = planetContent.Properties["rotationPeriod"].ToString();
-        var orbitalPeriod = planetContent.Properties["orbitalPeriod"].ToString();
-        var diameter = planetContent.Properties["diameter"].ToString();
-        // var climate = ((JArray)properties.FirstOrDefault(x => x.Key == "climate").Value).ToObject<IEnumerable<string>>();
-        // var gravity = (string)properties.FirstOrDefault(x => x.Key == "gravity").Value;
-        // var terrain = (string)properties.FirstOrDefault(x => x.Key == "terrain").Value;
-        // var surfaceWater = (string)properties.FirstOrDefault(x => x.Key == "surfaceWater").Value;
-        var population = planetContent.Properties["population"].ToString();
-
-        return new Planet(name, population, new List<string?>(){"1", "2"});
+        return new Planet(){
+            Name = itemContent.Name,
+            RotationPeriod = itemContent.Properties["rotationPeriod"].ToString() ?? "Unknown",
+            OrbitalPeriod = itemContent.Properties["orbitalPeriod"].ToString() ?? "Unknown",
+            Diameter = itemContent.Properties["diameter"].ToString() ?? "Unknown",
+            Climate = ((JArray) itemContent.Properties["climate"]).ToObject<string[]>(),
+            Gravity = itemContent.Properties["gravity"].ToString() ?? "Unknown",
+            Terrain = ((JArray) itemContent.Properties["terrain"]).ToObject<string[]>(),
+            SurfaceWater = itemContent.Properties["surfaceWater"].ToString() ?? "Unknown",
+            Population = itemContent.Properties["population"].ToString() ?? "Unknown",
+        };
     }
 }

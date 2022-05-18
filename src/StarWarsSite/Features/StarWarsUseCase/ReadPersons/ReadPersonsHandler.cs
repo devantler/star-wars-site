@@ -1,7 +1,8 @@
-using AutoMapper;
 using MediatR;
+using Newtonsoft.Json.Linq;
 using StarWarsSite.Models;
 using Umbraco.Headless.Client.Net.Delivery;
+using Umbraco.Headless.Client.Net.Delivery.Models;
 
 namespace StarWarsSite.Features.StarWarsUseCase.ReadPersons;
 
@@ -14,19 +15,24 @@ public class ReadCharactersHandler : IRequestHandler<ReadPersonsQuery, IEnumerab
     }
     public async Task<IEnumerable<Person>> Handle(ReadPersonsQuery request, CancellationToken cancellationToken)
     {
-        var root = await _contentDeliveryService.Content.GetRoot();
-        var content = root.Single(x => x.Name == "People");
-        var childrenPagedContent = await _contentDeliveryService.Content.GetChildren(content.Id, null, 1, 100);
-        var result = new List<Person>();
-        foreach (var childContent in childrenPagedContent.Content.Items)
+        var data = await _contentDeliveryService.Content.GetByType("person", null, 1, 100);
+        return from itemContent in data.Content.Items select MapItemContentToPerson(itemContent);
+    }
+
+    private static Person MapItemContentToPerson(Content itemContent)
+    {
+        return new Person()
         {
-            var properties = childContent.Properties;
-            result.Add(new Person{
-                Name = (string)properties.FirstOrDefault(x => x.Key == "personName").Value,
-                Gender = (string)properties.FirstOrDefault(x => x.Key == "gender").Value,
-                //Specie = (string)properties.FirstOrDefault(x => x.Key == "specie").Value
-            });
-        }
-        return result;
+            Name = itemContent.Name,
+            Height = itemContent.Properties["height"].ToString() ?? "Unknown",
+            Mass = itemContent.Properties["mass"].ToString() ?? "Unknown",
+            HairColor = itemContent.Properties["hairColor"].ToString() ?? "Unknown",
+            SkinColor = itemContent.Properties["skinColor"].ToString() ?? "Unknown",
+            EyeColor = itemContent.Properties["eyeColor"].ToString() ?? "Unknown",
+            BirthYear = itemContent.Properties["birthYear"].ToString() ?? "Unknown",
+            Gender = itemContent.Properties["gender"].ToString() ?? "Unknown",
+            Homeworld = ((JObject)itemContent.Properties["homeworld"]).Value<string>("planetName"),
+            Specie = ((JObject)itemContent.Properties["specie"])?.Value<string>("name") ?? "Unknown"
+        };
     }
 }

@@ -13,19 +13,7 @@
         <Row Flex="Flex.JustifyContent.Center" Margin="Margin.Is4.FromBottom">
             @foreach (var planet in planets)
             {
-                <Card Class="planet shadow-lg" Margin="Margin.Is3" Background="Background.Dark" WhiteText>
-                    <CardImage Class="img" Source="images/planet.jpg" Alt=@($"{planet.Name} image") />
-                    <CardBody Flex="Flex.Column.JustifyContent.Around" Margin="Margin.IsAuto"
-                    TextAlignment="TextAlignment.Center" TextWeight="TextWeight.Bold">
-                        <CardTitle Size="5">@planet.Name</CardTitle>
-                        <CardText>
-                            <Text>Population:</Text>
-                            <br />
-                            <Text>@planet.Population</Text>
-                        </CardText>
-                        <Button Class="button" Color="Color.Primary" Clicked="@(() => detailsModal.Show(CreateDictionaryFromPlanet(planet)))">Visit</Button>
-                    </CardBody>
-                </Card>
+                <PlanetCard Planet=@planet DetailsModal=@detailsModal/>
             }
         </Row>
     </Container>

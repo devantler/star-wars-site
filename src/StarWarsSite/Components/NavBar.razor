@@ -3,6 +3,7 @@
 @inject IJSRuntime JsRuntime;
 <audio src="audio/chewbacca.mp3" id="chewbacca"></audio>
 <audio src="audio/lightsaber.mp3" id="lightsaber"></audio>
+<audio src="audio/blaster.wav" id="blaster"></audio>
 <Bar Breakpoint="Breakpoint.Desktop" Background="Background.Dark" ThemeContrast="ThemeContrast.Dark" class="shadow-sm">
     <BarBrand>
         Star Wars Site
@@ -18,6 +19,9 @@
             </BarItem>
             <BarItem>
                 <BarLink Clicked=@( async () => PlaySound("lightsaber")) To="persons">Persons</BarLink>
+            </BarItem>
+            <BarItem>
+                <BarLink Clicked=@( async () => PlaySound("blaster")) To="vehicles-and-starships">Vehicles and Starships</BarLink>
             </BarItem>
         </BarStart>
     </BarMenu>

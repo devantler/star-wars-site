@@ -1,6 +1,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Components;
-using StarWarsSite.Components;
+using Newtonsoft.Json;
+using StarWarsSite.Components.Modals;
 using StarWarsSite.Features.StarWarsUseCase.ReadPersons;
 using StarWarsSite.Models;
 
@@ -15,13 +16,5 @@ public partial class Persons
     protected override async Task OnInitializedAsync(){
         var data = await Mediator.Send(new ReadPersonsQuery());
         persons = data.ToList();
-    }
-
-    private static Dictionary<string, string> CreateDictionaryFromPerson(Person person)
-    {
-        return new Dictionary<string, string>{
-            {nameof(person.Name), person.Name},
-            {nameof(person.Gender), person.Gender}
-        };
     }
 }

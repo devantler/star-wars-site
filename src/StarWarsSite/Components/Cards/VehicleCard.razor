@@ -1,0 +1,15 @@
+<div class="vehicle-card-component">
+    <Card Class="vehicle shadow-lg" WhiteText Margin="Margin.Is3.FromBottom">
+        <CardBody Class="card-body" TextAlignment="TextAlignment.Center" TextWeight="TextWeight.Bold">
+            <CardTitle Size="5">@Vehicle.Name</CardTitle>
+            <CardText>
+                <Text>@Vehicle.Model</Text>
+            </CardText>
+            <CardText>
+                <Text>@Vehicle.VehicleClass</Text>
+            </CardText>
+            <Button Color="Color.Primary" Clicked="@(() => DetailsModal.Show(Vehicle.ToDictionary()))">Learn
+                More</Button>
+        </CardBody>
+    </Card>
+</div>

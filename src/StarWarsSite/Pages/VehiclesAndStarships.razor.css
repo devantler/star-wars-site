@@ -1,7 +1,7 @@
 div#root {
     height: 100%;
     overflow-x: hidden;
-    background: url(images/backgrounds/planets.jpg) no-repeat center center fixed;
+    background: url(images/backgrounds/vehicles-and-starships.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

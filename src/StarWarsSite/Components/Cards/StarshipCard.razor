@@ -1,0 +1,15 @@
+<div class="starship-card-component">
+    <Card Class="starship shadow-lg" WhiteText Margin="Margin.Is3.FromBottom">
+        <CardBody Class="card-body" TextAlignment="TextAlignment.Center" TextWeight="TextWeight.Bold">
+            <CardTitle Size="5">@Starship.Name</CardTitle>
+            <CardText>
+                <Text>@Starship.Model</Text>
+            </CardText>
+            <CardText>
+                <Text>@Starship.StarshipClass</Text>
+            </CardText>
+            <Button Color="Color.Primary" Clicked="@(() => DetailsModal.Show(Starship.ToDictionary()))">Learn
+                More</Button>
+        </CardBody>
+    </Card>
+</div>

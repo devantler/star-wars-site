@@ -1,0 +1,30 @@
+@page "/vehicles-and-starships"
+
+<PageTitle>Vehicles and Starships</PageTitle>
+
+<div id="root">
+    <Container Margin="Margin.Is2.FromTop">
+        @if (vehiclesAndStarships.Count == 0)
+        {
+            <div class="center-fixed">
+                <SpinKit Type="SpinKitType.CircleFade" />
+            </div>
+        }
+        <Row Flex="Flex.JustifyContent.Center" Margin="Margin.Is4.FromBottom">
+            @foreach (var vehicleOrStarship in vehiclesAndStarships)
+            {
+                <Column ColumnSize="ColumnSize.IsFull.OnMobile.IsHalf.OnTablet.IsThird.OnDesktop.IsQuarter.OnWidescreen">
+                    @if (vehicleOrStarship is Vehicle)
+                    {
+                        <VehicleCard Vehicle=@(vehicleOrStarship as Vehicle) DetailsModal=detailsModal />
+                    }
+                    else if (vehicleOrStarship is Starship)
+                    {
+                        <StarshipCard Starship=@(vehicleOrStarship as Starship) DetailsModal=detailsModal />
+                    }
+                </Column>
+            }
+        </Row>
+    </Container>
+    <DetailsModal @ref=detailsModal />
+</div>

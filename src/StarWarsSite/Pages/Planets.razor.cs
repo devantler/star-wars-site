@@ -1,6 +1,6 @@
 using MediatR;
 using Microsoft.AspNetCore.Components;
-using StarWarsSite.Components;
+using StarWarsSite.Components.Modals;
 using StarWarsSite.Features.StarWarsUseCase.ReadPlanets;
 using StarWarsSite.Models;
 
@@ -17,13 +17,5 @@ public partial class Planets
     {
         var data = await Mediator.Send(new ReadPlanetsQuery());
         planets = data.ToList();
-    }
-
-    private static Dictionary<string, string> CreateDictionaryFromPlanet(Planet planet)
-    {
-        return new Dictionary<string, string>{
-            {nameof(planet.Name), planet.Name},
-            {nameof(planet.Population), planet.Population}
-        };
     }
 }
