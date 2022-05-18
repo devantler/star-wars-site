@@ -1,24 +1,23 @@
 @page "/persons"
-@using System.Globalization
 
 <PageTitle>Persons</PageTitle>
 
 <div id="root">
     <Container Margin="Margin.Is4.FromTop">
-        @if (persons.Count == 0)
+        @if (_persons.Count == 0)
         {
             <div class="center-fixed">
-                <SpinKit Type="SpinKitType.CircleFade" />
+                <SpinKit Type="SpinKitType.CircleFade"/>
             </div>
         }
         <Row>
-            @foreach (var person in persons)
+            @foreach (var person in _persons)
             {
                 <Column ColumnSize="ColumnSize.IsFull.OnMobile.IsHalf.OnTablet.IsThird.OnDesktop.IsQuarter.OnWidescreen">
-                    <PersonCard Person="person" DetailsModal=detailsModal/>
+                    <PersonCard Person="person" DetailsModal=_detailsModal/>
                 </Column>
             }
         </Row>
     </Container>
-    <DetailsModal @ref="detailsModal"/>
+    <DetailsModal @ref="_detailsModal"/>
 </div>

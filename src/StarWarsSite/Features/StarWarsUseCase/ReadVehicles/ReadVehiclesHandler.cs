@@ -2,15 +2,18 @@ using MediatR;
 using StarWarsSite.Models;
 using Umbraco.Headless.Client.Net.Delivery;
 using Umbraco.Headless.Client.Net.Delivery.Models;
+
 namespace StarWarsSite.Features.StarWarsUseCase.ReadVehicles;
 
 public class ReadVehiclesHandler : IRequestHandler<ReadVehiclesQuery, IEnumerable<Vehicle>>
 {
     private readonly ContentDeliveryService _contentDeliveryService;
+
     public ReadVehiclesHandler(ContentDeliveryService contentDeliveryService)
     {
         _contentDeliveryService = contentDeliveryService;
     }
+
     public async Task<IEnumerable<Vehicle>> Handle(ReadVehiclesQuery request, CancellationToken cancellationToken)
     {
         var data = await _contentDeliveryService.Content.GetByType("vehicle", null, 1, 100);
@@ -19,7 +22,7 @@ public class ReadVehiclesHandler : IRequestHandler<ReadVehiclesQuery, IEnumerabl
 
     private static Vehicle MapItemContentToVehicle(Content itemContent)
     {
-        return new Vehicle()
+        return new Vehicle
         {
             Name = itemContent.Name,
             Model = itemContent.Properties["model"].ToString() ?? "Unknown",

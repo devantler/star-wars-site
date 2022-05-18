@@ -4,27 +4,28 @@
 
 <div id="root">
     <Container Margin="Margin.Is2.FromTop">
-        @if (vehiclesAndStarships.Count == 0)
+        @if (_vehiclesAndStarships.Count == 0)
         {
             <div class="center-fixed">
-                <SpinKit Type="SpinKitType.CircleFade" />
+                <SpinKit Type="SpinKitType.CircleFade"/>
             </div>
         }
         <Row Flex="Flex.JustifyContent.Center" Margin="Margin.Is4.FromBottom">
-            @foreach (var vehicleOrStarship in vehiclesAndStarships)
+            @foreach (var vehicleOrStarship in _vehiclesAndStarships)
             {
                 <Column ColumnSize="ColumnSize.IsFull.OnMobile.IsHalf.OnTablet.IsThird.OnDesktop.IsQuarter.OnWidescreen">
-                    @if (vehicleOrStarship is Vehicle)
+                    @switch (vehicleOrStarship)
                     {
-                        <VehicleCard Vehicle=@(vehicleOrStarship as Vehicle) DetailsModal=detailsModal />
-                    }
-                    else if (vehicleOrStarship is Starship)
-                    {
-                        <StarshipCard Starship=@(vehicleOrStarship as Starship) DetailsModal=detailsModal />
+                        case Vehicle vehicle:
+                            <VehicleCard Vehicle=@(vehicle) DetailsModal=@_detailsModal/>
+                            break;
+                        case Starship starship:
+                            <StarshipCard Starship=@(starship) DetailsModal=@_detailsModal/>
+                            break;
                     }
                 </Column>
             }
         </Row>
     </Container>
-    <DetailsModal @ref=detailsModal />
+    <DetailsModal @ref="_detailsModal"/>
 </div>

@@ -9,10 +9,12 @@ namespace StarWarsSite.Features.StarWarsUseCase.ReadPersons;
 public class ReadCharactersHandler : IRequestHandler<ReadPersonsQuery, IEnumerable<Person>>
 {
     private readonly ContentDeliveryService _contentDeliveryService;
+
     public ReadCharactersHandler(ContentDeliveryService contentDeliveryService)
     {
         _contentDeliveryService = contentDeliveryService;
     }
+
     public async Task<IEnumerable<Person>> Handle(ReadPersonsQuery request, CancellationToken cancellationToken)
     {
         var data = await _contentDeliveryService.Content.GetByType("person", null, 1, 100);
@@ -21,7 +23,7 @@ public class ReadCharactersHandler : IRequestHandler<ReadPersonsQuery, IEnumerab
 
     private static Person MapItemContentToPerson(Content itemContent)
     {
-        return new Person()
+        return new Person
         {
             Name = itemContent.Name,
             Height = itemContent.Properties["height"].ToString() ?? "Unknown",

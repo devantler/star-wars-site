@@ -3,4 +3,4 @@ using StarWarsSite.Models;
 
 namespace StarWarsSite.Features.StarWarsUseCase.ReadStarships;
 
-public record ReadStarshipsQuery() : IRequest<IEnumerable<Starship>>;
+public record ReadStarshipsQuery : IRequest<IEnumerable<Starship>>;

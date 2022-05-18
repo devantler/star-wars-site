@@ -13,6 +13,7 @@ public record VehicleOrStarship : IComparable
     public string CargoCapacity { get; internal set; } = "";
     public string Consumables { get; internal set; } = "";
     public string[] Pilots { get; internal set; } = Array.Empty<string>();
+
     public int CompareTo(object? obj)
     {
         return Name.CompareTo(((VehicleOrStarship)obj!).Name);

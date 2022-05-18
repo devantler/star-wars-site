@@ -1,5 +1,4 @@
 @using System.Globalization
-
 <div class="person-card-component">
     <Card Class="person shadow-lg" WhiteText Margin="Margin.Is3.FromBottom">
         <CardBody Class="card-body" TextAlignment="TextAlignment.Center" TextWeight="TextWeight.Bold">
@@ -7,8 +6,10 @@
             <CardText>
                 <Text>@CultureInfo.CurrentCulture.TextInfo.ToTitleCase(Person.Gender)</Text>
             </CardText>
-            <Button Color="Color.Primary" Clicked="@(() => DetailsModal.Show(Person.ToDictionary()))">Learn
-                More</Button>
+            <Button Color="Color.Primary" Clicked="@(() => DetailsModal.Show(Person.ToDictionary()))">
+                Learn
+                More
+            </Button>
         </CardBody>
     </Card>
 </div>

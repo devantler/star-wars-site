@@ -1,7 +1,7 @@
 #root {
-    height:100%;
-    overflow-x:hidden;
-    background: url(images/backgrounds/persons.jpg) no-repeat center center fixed; 
+    height: 100%;
+    overflow-x: hidden;
+    background: url(images/backgrounds/persons.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

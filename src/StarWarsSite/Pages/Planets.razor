@@ -4,18 +4,18 @@
 
 <div id="root">
     <Container Margin="Margin.Is2.FromTop">
-        @if (planets.Count == 0)
+        @if (_planets.Count == 0)
         {
             <div class="center-fixed">
-                <SpinKit Type="SpinKitType.CircleFade" />
+                <SpinKit Type="SpinKitType.CircleFade"/>
             </div>
         }
         <Row Flex="Flex.JustifyContent.Center" Margin="Margin.Is4.FromBottom">
-            @foreach (var planet in planets)
+            @foreach (var planet in _planets)
             {
-                <PlanetCard Planet=@planet DetailsModal=@detailsModal/>
+                <PlanetCard Planet=@planet DetailsModal=@_detailsModal/>
             }
         </Row>
     </Container>
-    <DetailsModal @ref=detailsModal />
+    <DetailsModal @ref="_detailsModal"/>
 </div>

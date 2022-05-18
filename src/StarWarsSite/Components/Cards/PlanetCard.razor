@@ -1,16 +1,18 @@
 <div class="planet-card-component">
     <Card Class="planet shadow-lg" Margin="Margin.Is3" Background="Background.Dark" WhiteText>
-        <CardImage Class="img" Source="images/planet.jpg" Alt=@($"{Planet.Name} image") />
+        <CardImage Class="img" Source="images/planet.jpg" Alt=@($"{Planet.Name} image")/>
         <CardBody Flex="Flex.Column.JustifyContent.Around" Margin="Margin.IsAuto" TextAlignment="TextAlignment.Center"
-            TextWeight="TextWeight.Bold">
+                  TextWeight="TextWeight.Bold">
             <CardTitle Size="5">@Planet.Name</CardTitle>
             <CardText>
                 <Text>Population:</Text>
-                <br />
+                <br/>
                 <Text>@ToMillions(Planet.Population)</Text>
             </CardText>
             <Button Class="button" Color="Color.Primary"
-                Clicked="@(() => DetailsModal.Show(Planet.ToDictionary()))">Visit</Button>
+                    Clicked="@(() => DetailsModal.Show(Planet.ToDictionary()))">
+                Visit
+            </Button>
         </CardBody>
     </Card>
 </div>

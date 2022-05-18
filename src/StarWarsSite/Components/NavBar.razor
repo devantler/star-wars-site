@@ -1,6 +1,4 @@
-﻿@using Microsoft.JSInterop;
-
-@inject IJSRuntime JsRuntime;
+﻿@inject IJSRuntime JsRuntime;
 <audio src="audio/chewbacca.mp3" id="chewbacca"></audio>
 <audio src="audio/lightsaber.mp3" id="lightsaber"></audio>
 <audio src="audio/blaster.wav" id="blaster"></audio>
@@ -8,28 +6,30 @@
     <BarBrand>
         Star Wars Site
     </BarBrand>
-    <BarToggler />
+    <BarToggler/>
     <BarMenu>
         <BarStart>
             <BarItem>
                 <BarLink To="">Home</BarLink>
             </BarItem>
             <BarItem>
-                <BarLink Clicked=@( async () => PlaySound("chewbacca")) To="planets">Planets</BarLink>
+                <BarLink Clicked=@(async () => PlaySound("chewbacca")) To="planets">Planets</BarLink>
             </BarItem>
             <BarItem>
-                <BarLink Clicked=@( async () => PlaySound("lightsaber")) To="persons">Persons</BarLink>
+                <BarLink Clicked=@(async () => PlaySound("lightsaber")) To="persons">Persons</BarLink>
             </BarItem>
             <BarItem>
-                <BarLink Clicked=@( async () => PlaySound("blaster")) To="vehicles-and-starships">Vehicles and Starships</BarLink>
+                <BarLink Clicked=@(async () => PlaySound("blaster")) To="vehicles-and-starships">Vehicles and Starships</BarLink>
             </BarItem>
         </BarStart>
     </BarMenu>
 </Bar>
 
 @code {
+
     async void PlaySound(string audioElement)
     {
         await JsRuntime.InvokeAsync<string>("PlayAudio", audioElement);
     }
+
 }

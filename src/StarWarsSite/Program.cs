@@ -2,8 +2,6 @@ using Blazorise;
 using Blazorise.Bootstrap;
 using Blazorise.Icons.FontAwesome;
 using MediatR;
-using StarWarsSite.Models;
-using Umbraco.Headless.Client.Net.Configuration;
 using Umbraco.Headless.Client.Net.Delivery;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,8 +11,8 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddMediatR(typeof(Program));
 builder.Services.AddBlazorise(options => options.Immediate = true)
-                .AddBootstrapProviders()
-                .AddFontAwesomeIcons();
+    .AddBootstrapProviders()
+    .AddFontAwesomeIcons();
 var umbracoConfig = builder.Configuration.GetSection("heartcore");
 var projectAlias = umbracoConfig.GetValue<string>("projectAlias");
 var apiKey = umbracoConfig.GetValue<string>("apiKey");

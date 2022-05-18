@@ -1,8 +1,8 @@
-﻿<Blazorise.ThemeProvider Theme="@theme">
+﻿<Blazorise.ThemeProvider Theme="@_theme">
     <Router AppAssembly="@typeof(App).Assembly">
         <Found Context="routeData">
-            <RouteView RouteData="@routeData" DefaultLayout="@typeof(DefaultLayout)" />
-            <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+            <RouteView RouteData="@routeData" DefaultLayout="@typeof(DefaultLayout)"/>
+            <FocusOnNavigate RouteData="@routeData" Selector="h1"/>
         </Found>
         <NotFound>
             <PageTitle>Not found</PageTitle>
@@ -14,6 +14,5 @@
 </Blazorise.ThemeProvider>
 
 @code{
-    private Theme theme = new Theme(){
-    };
+    private readonly Theme _theme = new();
 }

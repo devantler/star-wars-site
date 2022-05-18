@@ -5,10 +5,11 @@ namespace StarWarsSite.Pages;
 
 public partial class Home
 {
-    [Inject] private IJSRuntime JsRuntime  { get; set; } = null!;
+    [Inject] private IJSRuntime JsRuntime { get; set; } = null!;
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if(firstRender)
+        if (firstRender)
             await PlayBackgroundMusic();
     }
 
