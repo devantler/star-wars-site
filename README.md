@@ -19,7 +19,7 @@ I built the site and the setup with the following tools:
 - .NET-6.0
 - Volume turned on if running the local version. The site has some epic sounds! 🤩
 
-## Can be viewed on
+## Reach the site here!
 
-- <star-wars-site.devantler.com> (no sounds however, not sure why autoplaying audio is not working in my hosted env)
+- <star-wars-site.devantler.com> - Hosted on my HomeLab with HashiCorp Nomad and my custom GitOps workflow
 - Locally by running `dotnet run` in `src/StarWarsSite`
