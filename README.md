@@ -21,5 +21,5 @@ I built the site and the setup with the following tools:
 
 ## Reach the site here!
 
-- <star-wars-site.devantler.com> - Hosted on my HomeLab with HashiCorp Nomad and my custom GitOps workflow
+- <https://star-wars-site.devantler.com> - Hosted on my HomeLab with HashiCorp Nomad and my custom GitOps workflow
 - Locally by running `dotnet run` in `src/StarWarsSite`
