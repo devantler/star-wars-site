@@ -22,4 +22,4 @@ I built the site and the setup with the following tools:
 ## Can be viewed on
 
 - <star-wars-site.devantler.com> (no sounds however, not sure why autoplaying audio is not working in my hosted env)
-- Locally by running `dotnet run` in src/StarWarsSite`
+- Locally by running `dotnet run` in `src/StarWarsSite`
