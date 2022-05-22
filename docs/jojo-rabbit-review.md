@@ -2,7 +2,10 @@
 
 ⭐️⭐️⭐️⭐️☆ 4/5 stars
 
-![picture 1](../images/fb9323ba8a292a4aa5716004f406a3a46fd8a3190df4742df17ede70f90dbfac.png) 
+<figure>
+  <img src="images/jojo-and-his-friend.png" alt="Me in Norway" width="450">
+  <figcaption>Image 1 -Jojo and his friend doing body swastikas.</figcaption>
+</figure>
 
 
 Jojo Rabbit is a comedy set in Germany in 1944 as World War II is ending. The plot is about Johannes "Jojo" Betzler and his imaginary friend, a witty Hitler. Johannes is a lonely 10-year-old Aryan boy with a humorous and innocent loyalty to the nazis. Throughout the movie, we follow the duo from Johannes's perspective.
