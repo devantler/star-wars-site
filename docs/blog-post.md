@@ -1,4 +1,4 @@
-# Mojn/Hello/Goddaw!
+# Hello everyone!
 
 <figure>
   <img src="images/me-in-norway.jpg" alt="Me in Norway" width="450">
@@ -7,7 +7,7 @@
 
 My name is Nikolai, and I just joined the most awesome team at Umbraco HQ! 🥳🥳
 
-I am a 28-year-old man originally from Sønderborg, Als. I am currently studying in the last year of my master's in Software Engineering at the University of Southern Denmark (SDU, Odense). I live in Kolding with my beautiful fiancé, and I commute to Odense every weekday to study and work. Most of that time is spent studying 📖, coding 👨🏻‍💻 or collaborating on interesting projects. In weekends, and when time allows, I enjoy being social and being in nature; I love meeting new people, enjoying a cold beer, or sailing 150km (Gudenåen) in 3 days in a canoe with my cousin! 🛶🍻
+I am a 28-year-old man originally from Sønderborg, Als. I am currently studying in the last year of my master's in Software Engineering at the University of Southern Denmark (SDU, Odense). I live in Kolding with my beautiful fiancé, and I commute to Odense every weekday to study and work. Most of that time is spent studying 📖, coding 👨🏻‍💻 or collaborating on interesting projects. At weekends, and when time allows, I enjoy being social and being in nature; I love meeting new people, enjoying a cold beer, or sailing 150km (Gudenåen) in 3 days in a canoe with my cousin! 🛶🍻
 
 <figure>
   <img src="images/canoe-trip.png" alt="Canoe Trip on Gudenåen" width="450">
