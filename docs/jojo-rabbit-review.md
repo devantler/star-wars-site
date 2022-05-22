@@ -4,7 +4,7 @@
 
 <figure>
   <img src="images/jojo-and-his-friend.png" alt="Me in Norway" width="450">
-  <figcaption>Image 1 -Jojo and his friend doing body swastikas.</figcaption>
+  <figcaption>Image 1 -Jojo and his second best friend, Yorki, doing body swastikas.</figcaption>
 </figure>
 
 
